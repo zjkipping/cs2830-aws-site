@@ -68,7 +68,7 @@
     <footer class="file-footer">
       <div class="nav">
         <ul>
-          <li><a title="Right Click -> 'Save Link As...'" href='./index.php'>Landing Page Code</a></li>
+          <li><a href="https://www.github.com/zjkipping/cs2830-aws-site">Site Code</a></li>
           <li><a href="https://www.github.com/zjkipping/">GitHub</a></li>
         </ul>
       </div>
