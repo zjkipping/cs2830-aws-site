@@ -1,0 +1,35 @@
+<!--
+  name: Zachary Kipping
+  pawprint: zkp64
+  date: 09/28/17
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Challenge 6</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <a href="#">hello</a>
+    <h1>Sixth Challenge</h1>
+    <div class="container">
+      <div id="code">
+        <textarea id="css" rows="21" placeholder="CSS..."></textarea>
+        <textarea id="html" rows="21" placeholder="HTML..."></textarea>
+      </div>
+      <div id="preview">
+        <iframe id="renderFrame"></iframe>
+      </div>
+    </div>
+    <div id="controls">
+      <button class="control-button" onclick="launchPreview()">Launch</button>
+      <button class="control-button" onclick="toggleCSS()">Toggle</button>
+      <button class="control-button" onclick="clearTextAreas()" ondblclick="setTitle()">Clear</button>
+    </div>
+    <h2>By:&nbsp;&nbsp;Zachary Kipping</h2>
+  </body>
+</html>

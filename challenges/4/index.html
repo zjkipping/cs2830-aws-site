@@ -1,0 +1,111 @@
+<!--
+name: Zachary Kipping
+pawprint: zkp64
+date: 09/14/17
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Challenge 4</title>
+  </head>
+  <body>
+    <table>
+      <tr><th class="header larger" colspan="7">Movie Theatre Showtimes</th></tr>
+      <tr><th class="header smaller" colspan="7">Saturday September 14, 2017</th></tr>
+      <tr id="keys">
+        <th>Poster</th>
+        <th>Movie</th>
+        <th>Rating</th>
+        <th>Length</th>
+        <th colspan="2">Showtimes</th>
+        <th>Amenities</th>
+      </tr>
+      <tr>
+        <td><img src="./MoviePosters/UnforgivenMovie.jpg" alt="Unforgiven"></td>
+        <td>Unforgiven</td>
+        <td>R</td>
+        <td>131 Minutes</td>
+        <td colspan="2" class="showtimes">
+          <div class="container">
+            <div class="half early">2:00 pm</div>
+            <div class="half">7:00 pm</div>
+          </div>
+        </td>
+        <td>No Comp Pass</td>
+      </tr>
+      <tr>
+        <td><img src="./MoviePosters/HitmanBodyGuardMovie.jpg" alt="Hitman Bodyguard"></td>
+        <td>Hitman's Bodyguard</td>
+        <td>R</td>
+        <td>118 Minutes</td>
+        <!-- Used the times from the bonus image; not sure if those were the times to use for this, but they show the 2 columns well enough -->
+        <td class="showtimes">
+          <div class="container">
+            <div class="fourth early">1:30pm</div>
+            <div class="fourth early">4:15pm</div>
+            <div class="fourth">7:05pm</div>
+            <div class="fourth">9:40pm</div>
+          </div>
+        </td>
+        <td id="bonus-td" class="showtimes">
+          <div class="container">
+            <div class="fourth early">2:00pm</div>
+            <div class="fourth">5:05pm</div>
+            <div class="fourth">7:35pm</div>
+            <div class="fourth">10:25pm</div>
+          </div>
+        </td>
+        <td id="bonus-amenities">NP, CC, DV</td>
+      </tr>
+      <tr>
+        <td><img src="./MoviePosters/LoganLuckyMovie.jpg" alt="Logan Lucky"></td>
+        <td>Logan Lucky</td>
+        <td>PG-13</td>
+        <td>119 Minutes</td>
+        <td colspan="2" class="showtimes">
+          <div class="container">
+            <div class="half">7:15pm</div>
+            <div class="half">10:00pm</div>
+          </div>
+        </td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td><img src="./MoviePosters/WindRiverMovie.jpg" alt="Wind River"></td>
+        <td>Wind River</td>
+        <td>R</td>
+        <td>110 Minutes</td>
+        <td colspan="2" class="showtimes">
+          <div class="container">
+            <div class="fifth early">11:20am</div>
+            <div class="fifth early">2:00pm</div>
+            <div class="fifth early">4:30pm</div>
+            <div class="fifth">7:00pm</div>
+            <div class="fifth">9:30pm</div>
+          </div>
+        </td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td><img src="./MoviePosters/AnnabelleCreationMovie.jpg" alt="Annabelle Creation"></td>
+        <td>Annabelle: Creation</td>
+        <td>R</td>
+        <td>110 Minutes</td>
+        <td colspan="2" class="showtimes">
+          <div class="container">
+            <div class="fifth early">11:45am</div>
+            <div class="fifth early">2:20pm</div>
+            <div class="fifth early">4:50pm</div>
+            <div class="fifth">7:30pm</div>
+            <div class="fifth">10:10pm</div>
+          </div>
+        </td>
+        <td>N/A</td>
+      </tr>
+    </table>
+  </body>
+</html>

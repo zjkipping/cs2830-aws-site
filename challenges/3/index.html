@@ -1,0 +1,83 @@
+<!--
+name: Zachary Kipping
+pawprint: zkp64
+date: 09/05/17
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Challenge 3</title>
+    <style>
+      .header {
+        text-align: center;
+      }
+
+      .container {
+        width: 950px;
+        margin: 0 auto;
+        border: 5px dashed lightgrey;
+      }
+
+      .container:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .left {
+        width: 220px;
+        background-color: blanchedalmond;
+      }
+
+      .center {
+        width: 380px;
+        background-color: aliceblue;
+      }
+
+      .right {
+        width: 110px;
+        background-color: mistyrose;
+      }
+
+      .column {
+        float: left;
+        padding: 15px; /*30 width total*/
+        margin: 20px; /*40 width total*/
+        border: 5px dashed thistle; /*10 width total*/
+      }
+
+      .column > pre {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">CS2830 Third Challenge</h1>
+    <div class="container">
+      <div class="column left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in blandit massa, facilisis congue purus.
+        Maecenas vitae ligula quis ipsum varius finibus in et ante. Proin sed enim ac diam viverra suscipit.
+        Nunc leo ligula, rutrum eu pulvinar a, rhoncus sit amet odio.
+        Pellentesque molestie malesuada tortor, mollis lobortis neque maximus at. Nunc dapibus nec enim a scelerisque.
+        Nam quis vestibulum metus. Sed ac tincidunt enim. Etiam quis fringilla ex. Proin facilisis lacinia metus nec volutpat.
+        Quisque ullamcorper mauris feugiat fringilla vestibulum. Morbi eleifend mauris urna, laoreet tempus nisi tincidunt sed.
+        Donec porta urna magna, ac convallis lectus ultricies id. Sed mauris lacus, sodales ac odio vel, tincidunt tincidunt ante.
+        Nunc cursus, lacus id ornare aliquam, elit libero semper felis, vel ultrices lorem tortor quis dolor.
+      </div>
+      <div class="column center">
+        <pre>Left Column Physical Width Calculation:<br>  + 220px -> Content Width<br>  + 30px = (2 * 15px) -> Padding Width<br>  + 40px = (2 * 20px) -> Margin Width<br>  + 10px = (2 * 5px) -> Border Width<br>  --------------------------------------<br>    300px Physical Width</pre><br>
+        <pre>Center Column Physical Width Calculation:<br>  + 380px -> Content Width<br>  + 30px = (2 * 15px) -> Padding Width<br>  + 40px = (2 * 20px) -> Margin Width<br>  + 10px = (2 * 5px) -> Border Width<br>  ----------------------------------------<br>    460px Physical Width</pre><br>
+        <pre>Right Column Physical Width Calculation:<br>  + 110px -> Content Width (Calculated Below)<br>  + 30px = (2 * 15px) -> Padding Width<br>  + 40px = (2 * 20px) -> Margin Width<br>  + 10px = (2 * 5px) -> Border Width<br>  ---------------------------------------------<br>    190px Physical Width</pre><br>
+        <pre>Right Column Content Width Calculation:<br>    950px -> Container Content Width<br>  - 220px -> Left Column Content Width<br>  - 380px -> Middle Column Content Width<br>  - 90px = (3 * 30px) -> Column Paddings<br>  - 120px = (3 * 40px) -> Column Margins<br>  - 30px = (3 * 10px) -> Column Borders<br>  ----------------------------------------<br>    110px Content Width</pre>
+      </div>
+      <div class="column right">
+        Duis semper ac dui non laoreet. Cras in imperdiet magna, egestas blandit purus. Nulla tempor risus dapibus velit pulvinar aliquet.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed varius erat ut tincidunt gravida. Donec eu dolor velit.
+        Suspendisse non convallis erat. Aenean semper lectus vel magna consequat lacinia. Ut ac bibendum ante. Nam interdum risus quis cursus.
+      </div>
+    </div>
+    <h2 class="header">Created By: Zachary Kipping</h2>
+  </body>
+</html>

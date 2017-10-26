@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to make a complete webpage application, with HTML, CSS, 
+		and JavaScript all combined together. Working together. To make a working app. 
+		This code makes an old school clock with CSS3 and jQuery. 
+-->
+
+<!-- References: 
+		1) http://www.w3schools.com/jsref/met_win_setinterval.asp		
+-->	
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html" />
+		<meta name="author" content="Professor Wergeles" />
+		<title>CSS3/jQuery Clock demo</title>
+		<script src="./jquery-3.2.1.min.js"></script>		
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#clock {
+				position: relative;
+				width: 600px;
+				height: 600px;
+				margin: 20px auto 0 auto;
+				background: url(images/clockface.jpg);
+				list-style: none;
+			}
+			#sec, #min, #hour {
+				position: absolute;
+				width: 30px;
+				height: 600px;
+				top: 0px;
+				left: 285px;
+			}
+			#min {
+				background: url(images/minhand.png);
+				z-index: 2;
+			}
+			#sec {
+				background: url(images/sechand_bear.png);
+				z-index: 3;
+				width: 300px;
+				left: 150px;
+			}
+			#hour {
+				z-index: 1;
+				background: url(images/hourhand.png);
+			}
+		</style>
+		<script>
+			$(() => {
+				// seconds hand
+				setInterval(() => {
+					var seconds = new Date().getSeconds();
+					// To get the angle -> 60 increments per rotation,
+					// image can be thought of as 360 degrees
+					// 360 / 60 = 6 degrees rotation per second
+					var sDegree = seconds* 6;
+					var sRotate = "rotate(" + sDegree + "deg)";
+					$("#sec").css({
+						"-moz-transform": sRotate,
+						"webkit-transform": sRotate,
+						"transform": sRotate
+					})
+				}, 1000);
+				// minutes hand
+				setInterval(() => {
+					var minutes = new Date().getMinutes();
+					// To get the angle -> 60 increments per rotation,
+					// image can be thought of as 360 degrees
+					// 360 / 60 = 6 degrees rotation per minute
+					var mDegree = minutes * 6;
+					var mRotate = "rotate(" + mDegree + "deg)";
+					$("#min").css({
+						"-moz-transform": mRotate,
+						"webkit-transform": mRotate,
+						"transform": mRotate
+					})
+				}, 1000);
+				// hours hand
+				setInterval(() => {
+					var minutes = new Date().getMinutes();
+					var hours = new Date().getHours();
+					// To get the angle -> 12 increments per rotation,
+					// image can be thought of as 360 degrees
+					// 360 / 12 = 30 degrees rotation per hour
+					// also partial hours so divide minutes by 2 to get extra portion
+					var hDegree = hours * 30 + (minutes / 2);
+					var hRotate = "rotate(" + hDegree + "deg)";
+					$("#hour").css({
+						"-moz-transform": hRotate,
+						"webkit-transform": hRotate,
+						"transform": hRotate
+					})
+				}, 1000);
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="clock">
+			<li id="sec"></li>
+			<li id="hour"></li>
+			<li id="min"></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+* {
+  background-color: #141414;
+  color: white;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+#css, #html {
+  background-color: #333333;
+  width: 100%;
+  height: 47%;
+  margin-bottom: 3%;
+  resize: none;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 2px lightgrey;
+  outline: none;
+  font-family: monospace;
+}
+#css:focus, #html:focus {
+  border: 1px solid #7bc1f7;
+  box-shadow: 0 0 30px 2px #7bc1f7;
+}
+
+::-webkit-input-placeholder {
+  color: #a5a5a5;
+}
+
+:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.container {
+  margin: 0 auto;
+  width: 75%;
+  height: 665px;
+}
+
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#code {
+  float: left;
+  width: 47%;
+  margin-right: 3%;
+}
+
+#preview {
+  background-color: white;
+  float: left;
+  width: 47%;
+  height: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 2px lightgrey;
+}
+
+#renderFrame {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: -1px;
+}
+
+#controls {
+  margin: 2% auto;
+  width: 75%;
+}
+
+.control-button {
+  width: 100px;
+  height: 30px;
+  margin-right: 1%;
+  background-color:#26a69a;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #141414;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.control-button:hover {
+  background-color: #33e0d0;
+}
+
+.control-button:active {
+  background-color: blue;
+}

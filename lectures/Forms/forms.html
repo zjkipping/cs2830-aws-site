@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main purpose: to show you HTML forms, proper usage, and sytax. 
+		The HTML <form> element defines a form that is used to collect user input -->
+
+<!-- References: 
+
+    1) http://www.w3schools.com/html/html_forms.asp
+    2) http://www.w3schools.com/html/html_form_elements.asp
+    3) http://www.w3schools.com/html/html_form_input_types.asp
+    4) http://www.w3schools.com/html/html_form_attributes.asp
+
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Form Elements</title>
+    <style>
+      /* form {
+        border: 1px solid black;
+      } */
+    </style>
+  </head>
+  <body>
+
+    <!-- 
+      action -> specifies where the data will go
+      method -> specifies how the data gets there (passed, sent, etc...)
+
+      Note: usually the form-data will be sent to a php file
+      Note: by default, the form is not visible to the user
+     -->
+    <form action="#" method="POST">
+      <!-- Text Input -->
+      <div>
+        <label for="user">Username:</label>
+        <input id="username" type="text" 
+          name="username" placeholder="Username" maxlength="10">
+
+        <!-- Note: the default width of a text input field is 20 characters -->
+      </div>
+      <!-- Password Input -->
+      <div>
+          <label for="password">Password:</label>
+          <input id="password" type="password" name="password" maxlength="10">
+      </div>
+      <!-- Note: each input field must have a name 
+      attribute to be submitted (usually to our php).
+    
+      If that name is omitted, the data of that input will not be sent at all -->
+      
+      <!-- Radio Buttons -->
+      <h3>What is your favorite dinosaur?</h3>
+      <div>
+        <input id="raptor" type="radio" name="dinosaurs" value="velociraptor" checked>
+        <label for="raptor">Velociraptor</label>
+      </div>
+      <div>
+        <input id="iguanodon" type="radio" name="dinosaurs" value="iguanodon">
+        <label for="iguanodon">Iguanodon</label>
+      </div>
+      <div>
+        <input id="t-rex" type="radio" name="dinosaurs" value="t-rex">
+        <label for="t-rex">T-Rex</label>
+      </div>
+
+    </form>
+
+    <h3>What are your interests?</h3>
+
+
+
+    <h3>What do you like to eat?</h3>
+
+
+
+    <p>This is a clickable button to do some action</p>
+
+
+
+    <h3>Comments?</h3>
+
+
+
+
+
+    <p>This is a datalist: </p>
+
+
+
+    <!-- Submit button -->
+
+
+    <!-- Various HTML form input types and input attributes-->
+
+    <!-- Reference:
+          
+          http://www.w3schools.com/jsref/event_oninput.asp
+          -->
+    <form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+
+
+
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <form>
+      Birthday:
+    </form>
+
+
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <form action="action_page.php">
+      Select your favorite color:
+
+    </form>
+
+
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <form action="action_page.php">
+      Birthday (date and time):
+    </form>
+
+
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <form>
+      E-mail:
+
+    </form>
+
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+    <form action="action_page.php" autocomplete="on">
+      First name:<input type="text" name="fname" autofocus><br> Last name: <input type="text" name="lname"><br> E-mail:
+      <input
+        type="email" name="email" autocomplete="off"><br>
+        <input type="submit">
+    </form>
+
+    <p>Fill in and submit the form, then reload the page to see how autocomplete works.</p>
+    <p>Notice that autocomplete is "on" for the form, but "off" for the e-mail field.</p>
+    <p>Notice we have an autofocus on the First Name field.</p>
+
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how jQuery .ready() works -->
+
+<!-- References: 
+		1) http://www.w3schools.com/jquery/event_ready.asp
+		2) http://www.w3schools.com/jquery/jquery_syntax.asp
+		3) http://www.w3schools.com/jquery/jquery_selectors.asp		
+-->
+<html>
+	<head>
+		<title>jQuery Loading</title>
+        
+        <script>
+            
+            
+            function pageLoaded() {
+                
+                console.log("body: onload event");
+                
+                var message = document.getElementById("message");
+				message.innerHTML = "The DOM has loaded";
+            }
+            
+            
+        </script>
+	</head>
+	<body onload="pageLoaded()">
+		<p id="message">Default</p>
+	</body>
+</html>

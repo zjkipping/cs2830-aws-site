@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to use transitions to make something valuable and 
+		modern, such as polaroid pictures on a stylish page -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS3 Polaroid Example</title>
+    <style>
+      body {
+        margin: 30px;
+        background-color: #E9E9E9;
+      }
+
+      img {
+        height: 400px;
+        width: 500px;
+      }
+
+      @font-face {
+        font-family: deutsch;
+        src: url("fonts/Deutsch-webfont.ttf");
+      }
+
+      @font-face {
+        font-family: permanentMarker;
+        src: url("fonts/PermanentMarker.ttf");
+      }
+
+      .polaroid {
+        width: 520px;
+        padding: 10px 10px 20px 10px;
+        text-align: center;
+        border: 1px solid #888;
+        background-color: white;
+        font-size: 16pt;
+        position: relative;
+        font-family: permanentMarker;
+      }
+
+      .polaroid:hover {
+        z-index: 1;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        box-shadow: 0 0 100px #555;        
+      }
+
+      .inline {
+        display: inline-block;
+      }
+
+      .rotate-left {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+      }
+
+      .rotate-right {
+        -webkit-transform: rotate(7deg);
+        transform: rotate(7deg);
+      }
+
+      @keyframes roll {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(1810deg);
+        }
+      }
+      #polaroid-spin:hover {
+        animation: roll 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inline">
+      <div class="polaroid inline rotate-left">
+        <img src="images/shanghai2.jpg" alt="pic1">
+        <h2>Shanghai, China</h2>
+      </div>
+      <div class="polaroid inline rotate-right">
+        <img src="images/golden.jpg" alt="pic2">
+        <h2>Golden Gate Bridge</h2>
+      </div>
+      <div class="polaroid inline rotate-left">
+        <img src="images/grand.jpg" alt="pic3">
+        <h2>Grand Canyon Arizona</h2>
+      </div>
+      <div id="polaroid-spin" class="polaroid inline rotate-right">
+        <img src="images/missouri.jpg" alt="pic4">
+        <h2>Fall In Missouri</h2>
+      </div>
+    </div>
+  </body>
+</html>

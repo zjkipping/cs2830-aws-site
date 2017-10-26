@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to use different fonts and how you can import your 
+		own custom font. With CSS3, websites can finally use fonts other than the 
+		pre-selected "web-safe" fonts.
+
+Note: Internet Explorer 8 and earlier, do not support the @font-face rule with the 
+		WOFF format (only support for EOT format). 
+
+-->
+<html>
+	<head>
+		<!-- References: 
+		
+				1) https://www.fontspring.com/support/general/difference-between-desktop-
+					font-and-webfont
+		
+				2) http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
+			
+				3) https://fonts.google.com/
+		
+				4) http://www.cssfontstack.com/Web-Fonts
+
+				5) https://www.fontsquirrel.com/
+		
+			-->
+		<meta charset="utf-8">
+		<title>CSS3 Web Fonts</title>
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+
+		<style>
+			@font-face {
+				font-family: airStream;
+				src: url(airstream_regular_macroman/Airstream-webfont.ttf);
+			}
+
+			#content {
+				/* if the airStream font fails, we declared a backup system,
+					where arial will be called */
+				font-family: airStream, arial;
+			}
+
+			h1,
+			h2,
+			h4 {
+				font-family: "Permanent Marker"
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<h1>Lorem Ipsum</h1>
+
+			<h2>Blah Blah Cool Font</h2>
+
+			<h4>Blah blah blah</h4>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium mollis tempor. Aliquam sit amet felis lacus. Nam
+				sit amet nibh vel nunc tristique condimentum eget vitae nunc. Cras convallis tellus vel dolor varius tincidunt. Suspendisse
+				tincidunt purus id felis tempus tristique. In hac habitasse platea dictumst. Nullam sed risus vel massa porttitor fermentum.
+				Nulla sit amet commodo diam. Donec rhoncus mattis elit, nec tempor eros aliquet vel. Nunc quis ante est. Nulla facilisi.
+				Cras a lectus metus. Morbi viverra commodo turpis tempor ultricies. Suspendisse aliquet diam id sem bibendum ornare.</p>
+		</div>
+	</body>
+</html>
