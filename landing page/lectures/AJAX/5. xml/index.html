@@ -12,9 +12,11 @@
 				var xmlDoc = xmlHttp.responseXML;
 				var output = '';
 				var movieTitles = xmlDoc.getElementsByTagName('title');
+				var movieYears = xmlDoc.getElementsByTagName('year');
 				console.dir(movieTitles);
 				for(var x = 0; x < movieTitles.length; x++) {
-					output += movieTitles[x].childNodes[0].nodeValue + '<br>';
+					output += movieTitles[x].childNodes[0].nodeValue + ' : ' + movieYears[x].childNodes[0].nodeValue + '<br>';
+
 				}
 				document.getElementById('movieBox').innerHTML = output;
 			}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri  -->
+<html>
+	<head>
+		<title>jQuery AJAX Intro</title>
+		<script src="../jquery-1.11.2.min.js"></script>
+		<script>
+			/* Reference: 
+				1) http://api.jquery.com/category/ajax/
+				2) http://api.jquery.com/jQuery.get/
+			*/
+			function getContent() {
+				// Jquery AJAX GET
+				$('#contentBox').html('Loading...');
+				$.get("responder.php", data => {
+					console.dir(data);
+					$('#contentBox').html(data);
+				});
+
+
+				// Raw Javascript AJAX GET
+				// var xmlHttp = new XMLHttpRequest();
+				// xmlHttp.onreadystatechange = function() {
+				// 	if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+				// 		document.getElementById("contentBox").innerHTML = xmlHttp.responseText;
+				// 	}
+				// };
+				// document.getElementById('contentBox').innerHTML = "Loading...";
+				// xmlHttp.open("GET", "responder.php", true);
+				// xmlHttp.send();  
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1>Content</h1>
+		<p id="contentBox"></p>
+		<button type="button" onclick="getContent()">Get Content</button>
+	</body>
+</html>

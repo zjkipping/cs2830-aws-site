@@ -51,7 +51,7 @@
           }
           $directories = glob('/var/www/html/lectures/*', GLOB_ONLYDIR);
           foreach($directories as $directory) {
-            echo '<div class="directory col-xs-12 col-sm-6 col-md-4 col-lg-2">';
+            echo '<div class="directory col-xs-12 col-sm-6 col-md-4 col-lg-3">';
               echo '<div class="panel panel-default">';
                 echo '<div class="panel-title">';
                   echo '<h3 class="directory-title">'.str_replace('/var/www/html/lectures/', '', $directory).'</h3>';
